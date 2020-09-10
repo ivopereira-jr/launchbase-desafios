@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block title %}
+    {% endblock title %}
+   <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+   <link rel="icon" href="/./images/favicon.ico" type="image/x-icon" />
+   <link rel="stylesheet" href="/css/style.css">
+   {% block head %}
+   {% endblock head %}
+</head>
+<body>
+    <header>
+        <div class="links">
+            <a href="/">Incio</a>
+            <a href="/sobre">Sobre</a>
+            <a href="/cursos">Cursos</a>
+            <a href="https://discordapp.com/invite/gCRAFhc" target="_blank">Comunidade</a>
+            <a href="tel:+5547992078767">Telefone</a><!--utilizando o tel: o link serve para chamar o comando de realizar uma ligação para o número-->
+            <a href="mailto:oi@rocketseat.com.br">Email</a><!--utilizando o mailto: Link serve chamar o comando de enviar email para o destinatário-->
+        </div><!--links-->
+    </header>
+
+   {% block content %}
+   {% endblock content %}
+
+   {% block script %}
+   {% endblock script %}
+</body>
+</html>

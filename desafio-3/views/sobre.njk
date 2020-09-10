@@ -1,0 +1,43 @@
+{% extends "layout.njk" %}
+
+{% block title %}
+   <title>Sobre</title>
+{% endblock title %}
+
+{% block content %}
+   <section class="sobre">
+      <div class="container">
+         <div class="card">
+            <div class="card-single-sobre">
+               <div class="card-img">
+                  <img src="images/logo.png" alt="logomarca da rocketseat">
+               </div><!--card-img-->
+               <div class="card-info">
+                  <h2>Rocketseat</h2>
+                  <p>Acelere a sua evolução</p>
+               </div><!--card-info-->
+               <div class="card-tecnologias">
+                  <h2>As melhores tecnologias em programação</h2>
+                  <ul>
+                     <li>JavaScript</li>
+                     <li>NodeJs</li>
+                     <li>ReactJs</li>
+                     <li>React Native</li>
+                  </ul>
+               </div><!--card-tecnologias-->
+               <div class="card-social">
+                  <a href="https://github.com/Rocketseat" target="_blank">Github</a>
+                  <a href="https://www.facebook.com/rocketseat" target="_blank">facebook</a>
+                  <a href="https://www.instagram.com/rocketseat_oficial/" target="_blank">Instagram</a>
+               </div>
+            </div><!--card-wraper-->
+            <div class="card-single-sobre">
+               <img src="./images/trofeu-home.svg" alt="imagem trofeu">
+               <h2>As mesmas tecnologias utilizadas por empresas como:</h2>
+               <h3>Nubank, Netflix, Uber, Instagram e Airbnb</h3>
+               <p>Imagine você dominando as mesmas tecnologias adotadas pelos melhores times do mundo, construindo aplicações de alta performance e se destacando entre os maiores programadores.</p>
+            </div>
+         </div><!--card-->
+      </div>
+   </section>
+{% endblock content %}

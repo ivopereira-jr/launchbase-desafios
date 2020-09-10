@@ -1,0 +1,44 @@
+{% extends "layout.njk" %}
+
+{% block title %}
+   <title>Cusos</title>
+{% endblock title %}
+
+{% block head %}
+   <link rel="stylesheet" href="/css/cursos.css">
+{% endblock head %}
+
+{% block content %}
+
+   <section class="cursos">
+      <div class="container">
+         <div class="cards">
+            {% for item in items %}
+               <div class="card-wraper" id="{{item.id}}">
+                  <span>{{item.indice}}</span>
+                  <div class="card-single">
+                     <div class="card-single-img">
+                        <img src="{{item.image}}" alt="imagem do curso {{item.id}}">
+                     </div><!--curso-img-->
+                     <div class="card-single-info">
+                        <p>
+                           <strong>{{item.title}}</strong><br>
+                           {{item.subtitle}}
+                        </p>
+                     </div><!--card-sigle-info-->
+                  </div><!--card-single-->
+                  {% if item.link %}
+                     <a class="garantir-vaga"><strong>{{item.linkTitle}}</strong> {{item.linkSubTitle}}</a>
+                  {% endif %}
+               </div><!--card-wraper-->
+            {% endfor %}
+         </div><!--cards-->
+      </div><!--container-->      
+   </section>
+
+{% endblock content %}
+
+{% block script %}
+   <script src="js/script.js"></script>
+{% endblock script %}
+

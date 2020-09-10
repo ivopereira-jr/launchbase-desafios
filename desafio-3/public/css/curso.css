@@ -1,0 +1,16 @@
+header {
+   display: none;
+}
+
+.modal-wraper  {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+}
+
+
+.modal-wraper iframe {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}

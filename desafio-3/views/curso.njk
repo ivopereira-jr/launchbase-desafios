@@ -1,0 +1,15 @@
+{% extends "layout.njk" %}
+
+{% block title %}
+   <title>{{cursos.id}}</title>
+{% endblock title %}
+
+{% block head %}
+   <link rel="stylesheet" href="/css/curso.css">
+{% endblock head %}
+
+{% block content %}
+    <div class="modal-wraper">
+        <iframe src="https://rocketseat.com.br/{{cursos.id}}" frameborder="0"></iframe>
+    </div>
+{% endblock content %}
