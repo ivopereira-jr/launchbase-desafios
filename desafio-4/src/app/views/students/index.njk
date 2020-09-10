@@ -1,0 +1,47 @@
+{% extends "layout.njk" %}
+
+{% block content %}
+   <section class="content">
+      <div class="container">
+         <div class="card table-content">
+            <div class="header">
+               <a class="button" href="/students/create">Novo</a>
+               <form action="/students" method="GET">
+                  <input type="text" name="filter" value="{{filter}}" placeholder="Nome ou E-mail">
+                  <button type="submit">Buscar</button>
+               </form>
+            </div>
+            
+            <table width="100%"><!--para criaçao de tabelas-->
+               <thead><!--cabesalho-->
+                  <tr><!--linhas-->
+                     <th>Aluno(a)</th><!--colunas-->
+                     <th>E-mail</th>
+                     <th>Ano escolar</th>
+                     <th>Ação</th>
+                  </tr>
+               </thead>
+               <tbody><!--corpo da tabela-->
+                  {% for student in students %}
+                     <tr>
+                        <td>
+                           <span style="background-image: url({{student.avatar_url}})"></span>
+                           {{student.name}}</td>
+                           <td>{{student.email}}</td>
+                           <td>{{student.school_year}}</td>    
+                        <td><a href="/students/{{student.id}}">Ver</a></td>
+                     </tr>
+                  {% endfor %}
+               </tbody>
+            </table>
+
+            <div class="pagination"
+               data-page={{pagination.page}}
+               data-total={{pagination.total}}
+               data-filter={{filter}}
+            ></div>
+         </div><!--card table-content-->
+      </div><!--container-->
+   </section><!--content-->
+
+{% endblock content %}

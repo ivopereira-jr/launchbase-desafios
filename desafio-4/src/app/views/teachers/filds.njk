@@ -1,0 +1,43 @@
+<div class="card-single">
+   <h2>Avatar url</h2>
+   <input type="url" name="avatar_url" placeholder="ex.: https://" value="{{teacher.avatar_url}}">
+</div>
+<div class="card-single">
+   <h2>Nome</h2>
+   <input type="text" name="name" placeholder="Nome completo" value="{{teacher.name}}">
+</div>
+<div class="card-single">
+   <h2>Data de nascimento</h2>
+   <input type="date" name="birth_date" value="{{teacher.birth_date}}">
+</div>
+<div class="card-single">
+   <h2>Grau de escolaridade</h2>
+   <select name="education_level">
+      <option value="Ensino Médio Completo" 
+      {% if teacher.education_level == "Ensino Médio Completo" %} selected {% endif %}>Ensino Médio Completo
+      </option>
+      <option value="Ensino Superior Completo" 
+      {% if teacher.education_level == "Ensino Superior Completo" %} selected {% endif %}>Ensino Superior Completo
+      </option>
+      <option value="Mestrado e Doutorado" 
+      {% if teacher.education_level == "Mestrado e Doutorado" %} selected {% endif %}>Mestrado e Doutorado
+      </option>
+   </select>
+</div>
+<div class="card-single">
+   <h2>Tipo de aula</h2>
+   <span>
+      <input type="radio" name="class_type" value="person" {% if teacher.class_type == 'person' %}
+      checked
+   {% endif %}>Presencial</span>
+   <span>
+      <input type="radio" name="class_type" value="remote" {% if teacher.class_type == 'remote' %}
+      checked
+   {% endif %}>
+   À distância</span>
+</div>
+<div class="card-single">
+   <h2>Acompanhamento</h2>
+   <input type="text" name="subjects_taught" placeholder="ex.: Matemática e Física" value="{{teacher.subjects_taught}}">
+</div>
+<button type="submit">Salvar</button>

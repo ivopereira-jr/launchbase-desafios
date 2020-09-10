@@ -1,0 +1,59 @@
+<div class="card-single">
+   <h2>Avatar url</h2>
+   <input type="url" name="avatar_url" placeholder="ex.: https://" value="{{student.avatar_url}}">
+</div>
+<div class="card-single">
+   <h2>Nome</h2>
+   <input type="text" name="name" placeholder="Nome completo" value="{{student.name}}">
+</div>
+<div class="card-single">
+   <h2>E-mail</h2>
+   <input type="text" name="email" placeholder="ex. name@email.com" value="{{student.email}}">
+</div>
+<div class="card-single">
+   <h2>Data de nascimento</h2>
+   <input type="date" name="birth_date" value="{{student.birth_date}}">
+</div>
+<div class="card-single">
+   <h2>Ano escolar</h2>
+   <select name="school_year">
+      <option value="5º ano do ensino fundamental" 
+      {% if student.school_year == "5º ano do ensino fundamental" %} selected {% endif %}>5º ano do ensino fundamental
+      </option>
+      <option value="6º ano do ensino fundamental" 
+      {% if student.school_year == "6º ano do ensino fundamental" %} selected {% endif %}>6º ano do ensino fundamental
+      </option>
+      <option value="7º ano do ensino fundamental" 
+      {% if student.school_year == "7º ano do ensino fundamental" %} selected {% endif %}>7º ano do ensino fundamental
+      </option>
+      <option value="8º ano do ensino fundamental" 
+      {% if student.school_year == "8º ano do ensino fundamental" %} selected {% endif %}>8º ano do ensino fundamental
+      </option>
+      <option value="1º ano do ensino médio" 
+      {% if student.school_year == "1º ano do ensino médio" %} selected {% endif %}>1º ano do ensino médio
+      </option>
+      <option value="2º ano do ensino médio" 
+      {% if student.school_year == "2º ano do ensino médio" %} selected {% endif %}>2º ano do ensino médio
+      </option>
+      <option value="3º ano do ensino médio" 
+      {% if student.school_year == "3º ano do ensino médio" %} selected {% endif %}>3º ano do ensino médio
+      </option>
+   </select>
+</div>
+<div class="card-single">
+   <h2>Carga horaria semanal</h2>
+   <input type="number" name="weekly_workload" value="{{student.weekly_workload}}">
+</div>
+<div class="card-single">
+   <h2>Professor(a)</h2>
+   <div>
+      <select name="teacher">
+         {% for teacher in teacherOptions %}
+            <option value="{{teacher.id}}" {% if student.teacher_id == teacher.id %} selected {% endif %}>
+               {{teacher.name}}
+            </option>
+         {% endfor %}
+      </select>
+   </div>
+</div>
+<button type="submit">Salvar</button>
