@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+:root {
+   --color-title: rgb(75, 75, 75);
+   --color-subtitle: rgb(154, 142, 191); 
+}
+
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: 'Roboto', sans-serif;
+}
+
+a {
+   text-decoration: none;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  background: #ccc;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px  rgb(172, 172, 172); 
+  border-radius: 4px;
+}
+ 
+::-webkit-scrollbar-thumb {
+  background: #7259c1; 
+  border-radius: 2px;
+  
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #604ca3; 
+}
+
+.container {
+   margin: 0 auto;
+   max-width: 1280px;
+   padding: 0 2%;
+}
+
+/*---header---*/
+
+header {
+   width: 100%;
+   text-align: center;
+   padding: 20px 30px;
+   background: #6c4fbb;
+}
+
+.links nav ul li {
+   list-style: none;
+   display: inline-block;
+}
+
+.links a {
+   font-size: 18px;
+   font-weight: 400;
+   margin: 0 20px;
+   color: rgb(255, 255, 255);
+}
+
+/*banner-destaque--*/
+section.banner-destaque {
+   background: white;
+}
+
+.banner {
+   display: flex;
+   padding: 60px 0;
+}
+
+.banner-info {
+   margin: 0 auto;
+   padding: 40px 0;
+   max-width: 500px;
+}
+
+.banner-info h2 {
+   font-size: 36px;
+   line-height: 46px;
+   color: var(--color-title);
+}
+
+.banner-info p {
+   padding: 20px 0;
+   font-size: 18px;
+   line-height: 28px;
+   color: var(--color-subtitle);
+}
+
+.banner-info a {
+   color: white;
+   background: #6c4fbb;
+   padding: 15px 30px;
+   border-radius: 5px;
+   font-size: 16px;
+   line-height: 30px;
+   font-weight: bold;
+   margin-top: 20px;
+}
+
+.banner-img {
+   margin: 0 auto;
+}
+
+/*--sobre--*/
+
+section.sobre {
+   padding: 50px;
+}
+
+.card {
+   display: flex;
+   justify-content: center;
+}
+
+.card-single-sobre {
+   margin: 40px auto;
+   text-align: center;
+}
+
+.card-img img {
+   width: 200px;
+   border-radius: 50%;
+   border: 5px solid #13f177;
+}
+
+.card-info h2 {
+   color: var(--color-title);
+   font-size: 36px;
+   line-height: 46px;
+   margin-top: 20px;
+}
+
+.card-info p {
+   color: var(--color-subtitle);
+   font-size: 18px;
+   line-height: 28px;
+}
+
+.card-tecnologias {
+   margin: 20px 0;
+}
+
+.card-tecnologias h2 {
+   font-size: 24px;
+   line-height: 34px;
+   margin-bottom: 10px;
+   color: var(--color-title);
+}
+
+.card-tecnologias ul li {
+   list-style: none;
+   display: inline-block;
+   margin: 0 15px;
+   color: var(--color-subtitle);
+}
+
+.card-tecnologias ul li a {
+   font-size: 18px;
+   line-height: 28px;
+}
+
+.card-sobre a {
+   margin: 0 15px;
+   color: var(--color-title);
+}
+
+.card-sobre a:hover {
+   border-bottom: 1px solid var(--color-title);
+   transition: 400ms;
+}
+
+.card-single-sobre:last-child {
+   margin-top: 50px;
+   max-width: 600px;
+
+}
+
+.card-single-sobre:last-child h2 {
+   color: var(--color-title);
+   font-size: 36px;
+    line-height: 48px;
+   margin-top: 20px;
+}
+
+.card-single-sobre:last-child h3 {
+   font-size: 24px;
+   line-height: 52px;
+   color: var(--color-subtitle);
+}
+
+.card-single-sobre:last-child p {
+   font-size: 18px;
+   line-height: 32px;
+   color: var(--color-subtitle);
+}
